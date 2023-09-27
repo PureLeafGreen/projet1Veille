@@ -45,6 +45,7 @@ start_time = datetime.datetime.strptime("06:00:00", "%H:%M:%S").time()
 end_time = datetime.datetime.strptime("07:00:00", "%H:%M:%S").time()
 delta = datetime.timedelta(minutes=15)
 
+#Calcule le nombre de voyages de bus pour un arrêt donné dans une fenêtre de temps donnée
 def calculate_bus_trips(stop_id, start_time, end_time):
     stop_times_copy = stop_times_df.loc[stop_times_df['stop_id'] == int(stop_id)].copy()
     
